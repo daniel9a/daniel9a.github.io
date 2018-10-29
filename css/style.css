@@ -118,7 +118,7 @@
 
 .about3 {
   color: rgb(165, 164, 164);
-
+  padding-left: 150px;
 }
 .about3 p{
   font-size: 18px;
@@ -131,6 +131,7 @@
 
 .about2 {
   color: rgb(165, 164, 164);
+  padding-left: 30px;
 
 }
 
@@ -142,10 +143,19 @@
 @media (max-width: 990px) {
   .about {
     text-align: center;
-    padding: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    
   }
   .about1 {
+    padding-top: 50px;
+  }
+  .about2 {
+    padding-left: 0%;
     padding-top: 30px;
+  }
+  .about3 {
+    padding-left: 0%;
   }
 }
 
