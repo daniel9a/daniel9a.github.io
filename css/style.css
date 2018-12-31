@@ -24,8 +24,18 @@ body {
   transition: background-color 0.7s ease-out;
 }
 
+.navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: white;
+}
+
 .navbar.scrolled {
   background-color:  #434343;  
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    background-color: #434343;
+  }
 }
 
 #particles-js {
@@ -101,7 +111,7 @@ body {
 ******************/
 .break hr {
   width: 85%;
-  margin: 5% auto;
+  margin: 100px auto;
   border-width: 7px;
   border-color: #434343;
 }
