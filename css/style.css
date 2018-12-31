@@ -113,8 +113,8 @@ body {
 .about {
   position: relative;
   padding-top: 70px;
-  
   padding-left: 18%;
+  overflow: hidden;
   /*padding-right: 20%;*/
 }
 
@@ -208,7 +208,7 @@ body {
   padding-right: 40px;
   width: 100%;
   margin: 20px auto; 
-  
+  overflow: hidden
 }
 
 .desc hr {
