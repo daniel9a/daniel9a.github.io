@@ -1,42 +1,64 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  /*Change font*/
-  body {
-    /*background-color: mediumaquamarine;*/
-    background-color:  #273441;
-    /*font-family: "Helvetica Neue", sans-serif;*/
-    font-family: "Fira Code", sans-serif;
-	  margin: 0;
-	  padding: 0;
-  }
-  
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/*Change font*/
+body {
+  padding: 2% 5%;
+  background: #000000;  
+
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  font-family: "Fira Code", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+body.modal-open {
+  overflow: visible;
+
+  position: absolute;
+    width: 100%;
+    height:100%;
+}
+
+.fa:focus {outline: 0;}
+
+.navbar {
+  font-size: 20px;
+  background-color: transparent;
+  transition: background-color 0.7s ease-out;
+}
+
+.navbar.scrolled {
+  background-color:  #434343;  
+}
+
 #particles-js {
-  background: url(../img/background.jpg) no-repeat center top;
-  /*padding-top:200px;*/
+  background: #114357;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   text-align:center;
   background-attachment: relative;
   background-position: center center;
   position: relative;
   height: 750px;
   min-height: 500px;
-  width: 100%;
-  
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
 
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+
 }
 
-
-/*Transparent Box*/ 
+/******************
+  Transparent Box 
+******************/
 .prof-box {
 
   position: absolute;
@@ -46,7 +68,6 @@
   color: white;
   max-width: 80%;
   padding: 1em 2em;
-
 
   background: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
@@ -83,15 +104,26 @@
   font-size: 40px;
 }
 
+/******************
+ Line Break
+******************/
+.break hr {
+  width: 85%;
+  margin: 5% auto;
+  border-width: 7px;
+  border-color: #434343;
+}
+
+/******************
+  About Section 
+******************/
 
 .about {
   position: relative;
-  background:rgba(0, 0, 0, 0.3);
   padding-top: 70px;
-  padding-bottom: 70px;
-  padding-left: 200px;
-  padding-right: 70px;
-
+  
+  padding-left: 18%;
+  /*padding-right: 20%;*/
 }
 
 
@@ -109,6 +141,7 @@
 
 }
 .about1 h3{
+  font-size: 40px;
   color: white;
 }
 .about1 p {
@@ -118,7 +151,7 @@
 
 .about3 {
   color: rgb(165, 164, 164);
-  padding-left: 150px;
+  padding-left: 100px;
 }
 .about3 p{
   font-size: 18px;
@@ -140,6 +173,7 @@
   color: rgb(165, 164, 164);
 }
 
+
 @media (max-width: 990px) {
   .about {
     text-align: center;
@@ -160,31 +194,49 @@
 }
 
 
-/* Global Values */
+/******************
+  Resume Section
+******************/
+
+.resume h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3%;
+}
 
 .desc {
+  background: whitesmoke;
+  border: 7px solid grey;
 
-  border-radius: 20px;
-  background: darkgray;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 40px;
   padding-right: 40px;
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px auto; 
   
 }
 
+.desc hr {
+  border: 3px solid grey;
+}
+
 .desc h5 {
-  color: white;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .desc p {
-  color: saddlebrown;
+  color: #757F9A;
+  font-size: 14px;
+  
 }
 
 .desc t {
-  color: teal;
+  font-size: 24px;
+  color: #131415;
   font-weight: 700;
 }
 
@@ -192,16 +244,19 @@
   padding: 6px;
   color: white;
   border-radius: 10px;
-  background: #34495e;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .desc more {
   color: black;
+  padding-top: 10%;
 }
 
 
 sm {
+  color: black;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .desc .col-lg-3 {
@@ -214,36 +269,152 @@ sm {
 }
 
 
+/***********
+Portfolio
+***********/
 
-/********** Work **********/
+.works{
+  padding: 0 auto;  
+}
+.works h1 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3%;
+}
+.web-container{
+  margin: 3% 3%;
+}
+
+.works-category{}
+
+.works-category ul{
+  margin: 0;
+  padding: 0;
+  clear: both;
+  text-align: center;
+}
+.works-category ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+}
+.works-category ul li a{
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.3);
+  padding: 3px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.works-category ul li a:hover{
+  border-bottom: 3px solid white;
+}
+.works-category ul li a.selected{
+  border-bottom: 3px solid white;
+  border-bottom-width: 80%;
+}
+.all-works{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 2%;
+  padding: 0 4%;
+}
+.work-one{  
+  display: block;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+  position: relative;
+}
+.work-one:hover{
+  background-color: rgba(130, 130, 130, 0.5);
+  
+}
+.work-one a{
+  text-decoration: none;
+}
+.work-one img{
+  width: 250px;
+  height: 250px;
+  opacity: 1; 
+}
+
+.work-one:hover img{
+  opacity: 0.1;
+  transition: 0.3s ease-out;  
+}
+.des{
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+    width: 95%;
+    padding: 0 0;
+}
+.des h4{
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+}
+.des p{
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color:rgba(255,255,255,0.9);
+  font-style: italic;
+  opacity: 0; 
+}
+
+.des .btn {
+  margin: 1%;
+  margin-top: 3%;
+  font-size: 12px;
+  opacity: 0; 
+}
+
+.work-one:hover .btn{
+  opacity: 1;
+}
+
+.work-one:hover h4, .work-one:hover p {
+  opacity: 1;
+}
+.filter-hide{
+  display: none;
+}
+
+
+/******************
+  Coursework 
+******************/
 .main {
-  border-radius: 20px;
-  /*background:  #466061;*/
-  /*background: indianred;*/
-  background:  rgb(127, 143, 175);
-  padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
-  width: 80%;
+  width: 85%;
   margin: 20px auto;
-/*
-  max-width: 1000px;
-  margin: auto;*/
-}
 
+}
 
 .row {
   margin: 8px -16px;
 }
-
-/* Add padding BETWEEN each column */
 .row,
 .row > .column {
   padding: 8px;
 }
 
-/* Create four equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
@@ -259,28 +430,38 @@ sm {
 /* Content */
 .content {
   border-radius: 10px;
-  background-color: rgb(74, 70, 80);
+  background-color: white;
   padding: 10px;
 }
 .content h3 {
-  background: #9b59b6;
+  background: #434343;
   padding: 15px;
   margin: 0;
   color: #fff;
   font-size: 18px;
-
-  /*border-radius: 6px 6px 0 0;*/
   border-radius: 6px;
   position: relative;
 }
 
 .content h3:hover {
-  background: #9966ff;
+  background: #202020;
+  text-decoration: none;
+}
+
+.content h3:focus {
+  text-decoration: none;
 }
 
 .content p {
   font-size: 12px;
+  color: black;
 }
+
+.content i {
+  font-size: 12px;
+  color: black;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
@@ -295,17 +476,19 @@ sm {
   }
 }
 
+.contact .form-control {
+  color: black;
+}
 
 
-/****************************/
+/******************
+  Footer 
+******************/
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(0,0,0,0.4);
+  background: #434343;
   color: #fff;
   height: 60px; }
-
-
-
 
